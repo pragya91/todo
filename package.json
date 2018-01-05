@@ -1,0 +1,24 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "todo",
+  "main": "index.js",
+  "scripts": {
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "start" : "nodemon -w server.js server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pragya",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react": "^6.24.1",
+    "nodemon": "^1.14.7",
+    "webpack": "^3.10.0"
+  }
+}

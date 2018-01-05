@@ -1,0 +1,64 @@
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+.list-header, ul{
+  margin: 20px 0;
+}
+.list-header div{
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+.deadline{
+  width: 100px;
+}
+.status{
+  width: 80px;
+}
+.task-row div{
+  display: inline-block;
+  font-size: 14px;
+}
+.edit-hide{
+  display: none;
+}
+.edit-show{
+  display: inline-block;
+}
+li .details, li form, .subtask-row{
+  margin-left: 185px;
+  font-size: 12px;
+}
+.details-hide {
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
+}
+.details-show{
+  max-height: 100px;
+  transition: max-height 0.5s ease-in;
+  overflow: visible;
+}
+.task-row button{
+  float: right;
+}
+.sub-details{
+      padding-left: 18px;
+}
+.subtask-row button{
+  float: right;
+  top: -30px;
+  position: relative;
+}
+h1{
+  text-align: center;
+  font-family: sans-serif;
+}
+ul{
+  padding: 0;
+}
+li{
+  list-style-type: none;
+  margin-bottom: 20px;
+}
