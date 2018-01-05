@@ -286,6 +286,8 @@ ReactDOM.render(React.createElement(TaskList, null), contentNode);
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TaskAdd_jsx__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SubToDo_jsx__ = __webpack_require__(3);
+//A single task taskRows
+
 
 
 class ToDoTask extends React.Component {
@@ -329,7 +331,7 @@ class ToDoTask extends React.Component {
       null,
       React.createElement(
         'div',
-        { className: "task-row " + (new Date(props.task.deadline).toDateString() < new Date() ? 'missed' : '') },
+        { className: "task-row " + (new Date(props.task.deadline) < new Date() ? 'missed' : '') },
         React.createElement(
           'div',
           { className: 'deadline' },
@@ -349,7 +351,7 @@ class ToDoTask extends React.Component {
         ),
         React.createElement(
           'button',
-          { className: 'edit', onClick: this.addSubTask },
+          { className: 'AddSubtaskBtn', onClick: this.addSubTask },
           this.state.addSubTask ? 'Cancel' : 'Add Sub Task'
         )
       ),
@@ -375,6 +377,8 @@ class ToDoTask extends React.Component {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+//Module to add a new task or SUB Task
+
 class TaskAdd extends React.Component {
   constructor() {
     super();
@@ -398,18 +402,13 @@ class TaskAdd extends React.Component {
     return React.createElement(
       "form",
       { name: "taskAdd", onSubmit: this.handleSubmit, className: "task-add" },
-      React.createElement(
-        "label",
-        { htmlFor: "new-task" },
-        "Add Item"
-      ),
-      React.createElement("input", { ref: "title", name: "title", type: "text", placeholder: "Enter task here" }),
-      React.createElement("textarea", { ref: "moredetails", name: "moredetails", placeholder: "More details... (optional)" }),
       React.createElement("input", { ref: "deadline", name: "deadline", type: "date" }),
+      React.createElement("input", { ref: "title", name: "title", type: "text", placeholder: "Enter task here", className: "taskName" }),
+      React.createElement("textarea", { ref: "moredetails", name: "moredetails", className: "taskAdditionalDetails", placeholder: "More details... (optional)" }),
       React.createElement(
         "button",
-        null,
-        "Add"
+        { className: "AddBtn" },
+        "Add Task"
       )
     );
   }
@@ -422,6 +421,7 @@ class TaskAdd extends React.Component {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+//Sub task module for the main tasks
 class SubToDo extends React.Component {
   constructor() {
     super();

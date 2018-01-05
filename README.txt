@@ -1,17 +1,30 @@
-Coding done using:
+The app uses the following:
 * ReactJS
 * Express.js
 
-
 All the dependencies and scripts are mentioned in package.json file.
-Please follow the following steps to run the project:
+To run the app:
 
-1) npm install, this should download all the dependencies.
-2) npm start (to run the express server)
-3) npm run watch to host the app.
+* npm install
+    This should download all the dependencies.
+* npm start
+    This will run the express server
+* npm run watch
+    This will host the app.
+
+Working Features
+----------------
+* Add task
+* Delete task
+* Add sub task
+* Delete sub task
+* Highlight missed task
+* Show/Hide task description
 
 
-Unit testing scenarios:
+Shortage of time compelled me to choose more functionality over unit testing,
+but following are the testing scenarios that I wanted the final version of the
+app to adhere to:
 ------------------------
 * Place Holder text return on empty list
 * Add task to empty list
@@ -21,4 +34,3 @@ Unit testing scenarios:
 * Adding duplicate task preserves both tasks
 * Deleting one of duplicate, preserve the other task.
 * Cannot add a task due before current time.
-*

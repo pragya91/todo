@@ -1,3 +1,5 @@
+//Module to add a new task or SUB Task
+
 export default class TaskAdd extends React.Component{
   constructor(){
     super();
@@ -22,11 +24,10 @@ export default class TaskAdd extends React.Component{
   render(){
     return (
       <form name="taskAdd" onSubmit={this.handleSubmit} className="task-add">
-        <label htmlFor="new-task">Add Item</label>
-        <input ref="title" name="title" type="text" placeholder="Enter task here"/>
-        <textarea ref="moredetails" name="moredetails" placeholder = "More details... (optional)"/>
         <input ref="deadline" name="deadline" type="date" />
-        <button>Add</button>
+        <input ref="title" name="title" type="text" placeholder="Enter task here" className="taskName"/>
+        <textarea ref="moredetails" name="moredetails" className="taskAdditionalDetails" placeholder = "More details... (optional)"/>
+        <button className="AddBtn" >Add Task</button>
       </form>
     );
   }

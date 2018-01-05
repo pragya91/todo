@@ -1,3 +1,5 @@
+//A single task taskRows
+
 import TaskAdd from './TaskAdd.jsx';
 import SubToDo from './SubToDo.jsx';
 export default class ToDoTask extends React.Component{
@@ -38,14 +40,13 @@ export default class ToDoTask extends React.Component{
       });
     return (
       <li>
-        <div className={"task-row " + (new Date(props.task.deadline).toDateString() < new Date() ? 'missed' : '')}>
+        <div className={"task-row " + (new Date(props.task.deadline) < new Date() ? 'missed' : '')}>
           <div className="deadline">{new Date(props.task.deadline).toDateString()}</div>
           <input type="checkbox" className="status"></input>
           <label className="tasks" onClick={this.titleClick}>{props.task.title}</label>
           <input type="text" className="edit-hide"></input>
-
           <button className="delete" onClick={this.deleteTask}>Delete</button>
-          <button className="edit" onClick={this.addSubTask}>{this.state.addSubTask ? 'Cancel' : 'Add Sub Task'}</button>
+          <button className="AddSubtaskBtn" onClick={this.addSubTask}>{this.state.addSubTask ? 'Cancel' : 'Add Sub Task'}</button>
         </div>
         <div className={'details ' + (this.state.detailsDisplay ? 'details-show' : 'details-hide')}>{props.task.moreDetails}</div>
         {this.state.addSubTask ? <TaskAdd createTask = {this.props.createSubTask} parentID = {props.task.id} /> : <div></div>}
