@@ -22,9 +22,7 @@ Working Features
 * Show/Hide task description
 
 
-Shortage of time compelled me to choose more functionality over unit testing,
-but following are the testing scenarios that I wanted the final version of the
-app to adhere to:
+testing scenarios
 ------------------------
 * Place Holder text return on empty list
 * Add task to empty list
